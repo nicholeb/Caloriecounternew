@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+        <variable
+            name="entryDetail"
+            type="com.example.caloriecounternew.Entry" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/purple_700" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                app:columnCount="2"
+                app:rowCount="5">
+
+
+                <TextView
+                    android:id="@+id/date_header_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/date_header"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:layout_column="0"
+                    app:layout_row="0" />
+
+                <TextView
+                    android:id="@+id/date_text_view"
+                    android:layout_width="236dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/white"
+                    android:text="@={entryDetail.date}"
+                    android:textSize="18sp"
+                    app:layout_column="1"
+                    app:layout_row="0" />
+
+                <TextView
+                    android:id="@+id/calories_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/calories_header"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:layout_column="0"
+                    app:layout_row="1" />
+
+                <EditText
+                    android:id="@+id/calories_edit_text"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:hint="Enter number of calories"
+                    android:inputType="number"
+                    android:text="@={entryDetail.calories}"
+                    android:textColorHint="@android:color/white"
+                    android:textColor="@color/white"
+                    app:layout_column="1"
+                    app:layout_row="1" />
+
+                <TextView
+                    android:id="@+id/carbs_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/carbs_header"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:layout_column="0"
+                    app:layout_row="2" />
+
+                <EditText
+                    android:id="@+id/carbs_edit_text"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:hint="@string/carbs_hint"
+                    android:textSize="18sp"
+                    android:inputType="text"
+                    android:text="@={entryDetail.carbs}"
+                    android:textColorHint="@android:color/white"
+                    android:textColor="@color/white"
+                    app:layout_column="1"
+                    app:layout_row="2"/>
+
+                <TextView
+                    android:id="@+id/fat_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/fat_header"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:layout_column="0"
+                    app:layout_row="3" />
+
+                <EditText
+                    android:id="@+id/fat_edit_text"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:hint="@string/fat_hint"
+                    android:inputType="numberDecimal"
+                    android:text="@={entryDetail.fat}"
+                    android:textSize="18sp"
+                    android:textColorHint="@android:color/white"
+                    android:textColor="@color/white"
+                    app:layout_column="1"
+                    app:layout_row="3" />
+
+                <TextView
+                    android:id="@+id/protein_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/protein_header"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:layout_column="0"
+                    app:layout_row="4"/>
+
+                <EditText
+                    android:id="@+id/protein_edit_text"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="18sp"
+                    android:hint="@string/protein_hint"
+                    android:inputType="number"
+                    android:imeOptions="flagNavigateNext"
+                    android:textColor="@color/white"
+                    android:text="@={entryDetail.protein}"
+                    android:textColorHint="@android:color/white"
+                    app:layout_column="1"
+                    app:layout_row="4" />
+            </androidx.gridlayout.widget.GridLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/cancel_button"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="200dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/cancel"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+                <Button
+                    android:id="@+id/add_entry_button"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="200dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/add_new"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

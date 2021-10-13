@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/EntryListFragment">
+
+    <fragment
+        android:id="@+id/EntryListFragment"
+        android:name="com.example.caloriecounternew.EntryListFragment"
+        android:label="List of Entries"
+        tools:layout="@layout/fragment_entry_list">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/EntryDetailFragment" />
+        <action
+            android:id="@+id/action_EntryListFragment_to_EntryDetailFragment"
+            app:destination="@id/EntryDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/EntryDetailFragment"
+        android:name="com.example.caloriecounternew.EntryDetailFragment"
+        android:label="Add a New Entry"
+        tools:layout="@layout/fragment_entry_detail">
+        <action
+            android:id="@+id/action_EntryDetailFragment_to_EntryListFragment"
+            app:destination="@id/EntryListFragment" />
+    </fragment>
+</navigation>

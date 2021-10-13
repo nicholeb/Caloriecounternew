@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Simple Macro and Calorie Tracker</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="date_header">Date:</string>
+    <string name="calories_header">Calories:</string>
+    <string name="carbs_header">Carbs:</string>
+    <string name="fat_header">Fat:</string>
+    <string name="protein_header">Protein:</string>
+    <string name="date_hint">Enter the Date</string>
+    <string name="calories_hint">Enter the number of calories</string>
+    <string name="carbs_hint">Enter the carb grams</string>
+    <string name="fat_hint">Enter the fat grams</string>
+    <string name="protein_hint">Enter the protein grams</string>
+    <string name="add_new">Add a new entry</string>
+    <string name="cancel">Cancel</string>
+    <string name="date">Date: %1$s</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="size_grouping" />
+    <string name="calories">Calories: %1$s</string>
+    <string name="carbs">Carbs: %1$s</string>
+    <string name="fat">Fat: %1$s</string>
+    <string name="protein">Protein: %1$s</string>
+</resources>
